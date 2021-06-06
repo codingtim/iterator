@@ -22,10 +22,6 @@ public class Paging {
         return new Paging(0, 2);
     }
 
-    public Paging next() {
-        return new Paging(from + limit, limit);
-    }
-
     public Paging next(int size) {
         return new Paging(from + size, limit);
     }

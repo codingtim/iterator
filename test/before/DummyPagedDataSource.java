@@ -19,6 +19,7 @@ public class DummyPagedDataSource implements PagedDataSource {
 
     @Override
     public List<Entity> getEntities(Paging paging) {
+        System.out.println("Request: " + paging);
         requests.add(paging);
         if (paging.getFrom() == 0) {
             return Arrays.asList(new Entity(1), new Entity(2));
